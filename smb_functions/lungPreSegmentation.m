@@ -1,0 +1,18 @@
+function L = lungPreSegmentation(I)
+%UNTITLED3 Summary of this function goes here
+%   Detailed explanation goes here
+
+    th_body = graythresh(I(I>0));
+    temp = logical(im2bw(I,th_body));
+        
+    CC = bwconncomp(temp,4);
+    stats = regionprops(CC,'PixelIdxList','Area');
+    areas = [stats.Area];
+    
+    idx = find(areas==max(areas));
+    body = zeros(size(I));
+    body(stats(idx).PixelIdxList) = 1;
+    
+    L = im2double(bwareaopen(imfill(body,4,'holes') - body, 2500, 4));        
+end
+
