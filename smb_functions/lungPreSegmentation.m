@@ -1,6 +1,9 @@
 function L = lungPreSegmentation(I)
-%UNTITLED3 Summary of this function goes here
-%   Detailed explanation goes here
+% This function employs Otsu's threshold to obtain a preliminary segmentation
+% of the lung region in a CT scan.
+%   inputs: I - the CT scan image
+%           
+%   outputs: L - a preliminary mask of the lungs region
 
     th_body = graythresh(I(I>0));
     temp = logical(im2bw(I,th_body));

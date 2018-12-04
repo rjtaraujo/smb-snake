@@ -1,6 +1,9 @@
 function H = handRegionGrowing(D)
-%UNTITLED4 Summary of this function goes here
-%   Detailed explanation goes here
+% This function employs region growing to obtain a preliminary segmentation
+% of the hand region in a depth image.
+%   inputs: I - the depth image of the hand
+%           
+%   outputs: H - a preliminary mask of the hand region
 
         sorted_values = unique(sort(D(:)));
         depth_corr = D;

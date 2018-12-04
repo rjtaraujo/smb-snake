@@ -1,5 +1,5 @@
 function [X2,J] = SMB_Snake2D(I,X,Options)
-% This is a function extending the Snake_2D function of Dirk-Jan Kroon to
+% This is a function reusing and extending the Snake_2D function of Dirk-Jan Kroon to
 % incorporate the capabilities of the SMB snake
 
 % Process inputs
@@ -63,7 +63,7 @@ for i=1:Options.Iterations
     
     X=SnakeMoveIteration2D(S,X,Fext,Options.Gamma,Options.Kappa,Options.Delta);
 
-    if ~resolution_check(X)
+    if ~resolutionCheck(X)
         X = reparameterize(X,Options.nPoints);
     end
     
@@ -108,9 +108,9 @@ end
 for i=1:Options.Iterations
     X2=SnakeMoveIteration2D(S,X2,Fext,Options.Gamma,Options.Kappa,Options.Delta);
 
-    if ~resolution_check(X2)
+    if ~resolutionCheck(X2)
         X2 = reparameterize(X2,Options.nPoints);
-        opt_betas = get_betas(X2,X,betas);
+        opt_betas = getBetas(X2,X,betas);
         S=SnakeInternalForceMatrix2D_pos(Options.nPoints,Options.Alpha,opt_betas,Options.Gamma);
     end    
     

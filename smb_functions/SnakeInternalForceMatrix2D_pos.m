@@ -1,7 +1,5 @@
 function B=SnakeInternalForceMatrix2D(nPoints,alpha,betas,gamma)
 %
-% B=SnakeInternalForceMatrix2D(nPoints,alpha,beta,gamma)
-%
 % inputs,
 %   nPoints : The number of snake contour points
 %   alpha : membrame energy  (first order)
@@ -12,7 +10,7 @@ function B=SnakeInternalForceMatrix2D(nPoints,alpha,betas,gamma)
 %   B : The Snake Smoothness regulation matrix
 %
 % Function is written by D.Kroon University of Twente (July 2010)
-% and adapted by Ricardo Araújo of INESC TEC (March 2017)
+% and adapted by Ricardo Araújo, INESC TEC (March 2017)
 
 % Penta diagonal matrix, one row:
 alphas = ones(nPoints,1)*alpha;
