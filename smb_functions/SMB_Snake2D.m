@@ -1,6 +1,12 @@
 function [X2,J] = SMB_Snake2D(I,X,Options)
 % The first part of the function is written by D.Kroon University of Twente (July 2010)
 % and the smb extension was made by by Ricardo Araújo, INESC TEC (March 2017)
+%   inputs: I - the image containing the object of interest
+%           X - the initial contour
+%           Options - set of parameters defining the model behavior
+%           
+%   outputs: X2 - the final contour
+%             J - the mask of the segmented object
 
 % Process inputs
 defaultoptions=struct('Verbose',false,'nPoints',100,'Wline',0.04,'Wedge',2,'Wterm',0.01,'Sigma1',10,'Sigma2',20,'Alpha',0.2,'Beta',0.2,'Delta',0.1,'Gamma',1,'Kappa',2,'Iterations',100,'GIterations',0,'Mu',0.2,'Sigma3',1,'betaMean',5,'maxValue',10,'lambda',1);

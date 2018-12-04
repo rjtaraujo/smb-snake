@@ -17,7 +17,7 @@ addpath('smb_functions')
 addpath(genpath('BasicSnake_version2f'))
 
 % select the example (4 are provided)
-example = 4;
+example = 1;
 
 
 % these are parameters related to the traditional snake
