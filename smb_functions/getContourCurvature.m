@@ -1,7 +1,7 @@
 function k = getContourCurvature(x,n)
 % This function returns a vector k comprising the local curvature at each
 % point of the contour x. The curvature at point x_i is calculated as the 
-% inverse of the radius of the circle that better explains x_(i-n):x_(i+n)
+% inverse of the radius of the circle that better fits x_(i-n):x_(i+n)
 %   inputs: x - the contour
 %           n - the number of neighbours taken into account in the circle
 %               fitting process

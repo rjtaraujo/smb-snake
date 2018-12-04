@@ -1,4 +1,4 @@
-function B=SnakeInternalForceMatrix2D(nPoints,alpha,betas,gamma)
+function B=SnakeInternalForceMatrix2D_pos(nPoints,alpha,betas,gamma)
 %
 % inputs,
 %   nPoints : The number of snake contour points
